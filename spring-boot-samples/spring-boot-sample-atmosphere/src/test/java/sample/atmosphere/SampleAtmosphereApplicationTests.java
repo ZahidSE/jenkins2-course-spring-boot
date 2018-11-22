@@ -119,7 +119,7 @@ public class SampleAtmosphereApplicationTests {
 				@Override
 				protected void handleTextMessage(WebSocketSession session,
 						TextMessage message) throws Exception {
-					logger.info("Received: " + message + " ("
+					logger.info("Received message: " + message + " ("
 							+ ClientConfiguration.this.latch.getCount() + ")");
 					session.close();
 					ClientConfiguration.this.messagePayload.set(message.getPayload());
